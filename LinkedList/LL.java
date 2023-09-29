@@ -7,6 +7,51 @@ public class LL{
     public LL() {
         this.size = 0;
     }
+    
+    public int deleteFirst(){
+        int val = head.value;
+        head = head.next;
+        
+        if(head.next == null){
+            tail = head;
+        }
+        size--;
+        return val;
+    }
+
+    public Node get(int index){
+        Node node = head;
+        for(int i = 0; i< index; i++){
+            node = node.next;
+        }
+
+        return node;
+    }
+    
+    public int delete(int index){
+        if(index == 0){
+            deleteFirst();
+        }
+
+        Node node = get(index -1);
+        int val = node.next.value;
+        node.next = node.next.next;
+        size--;
+        return val;
+
+    }
+
+    public int deleteLast(){
+        if(size <= 1){
+            deleteFirst();
+        }
+        Node node = get(size - 2);
+        int val = node.next.value;
+        tail = node;
+        tail.next = null;
+        size--;
+        return val;
+    }
 
     public void insertFirst(int val){
         Node node = new Node(val);
@@ -15,6 +60,7 @@ public class LL{
         if(tail == null){
             tail = head;
         }
+        size++;
     }
 
     public void insert(int val, int index){
@@ -26,6 +72,7 @@ public class LL{
 
         Node node = new Node(val, temp.next);
         temp.next = node;
+        size++;
     }
 
     public void insertLast(int val){
@@ -35,6 +82,7 @@ public class LL{
         if(head == null){
             head = tail;
         }
+        size++;
 
     }
 

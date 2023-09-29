@@ -12,5 +12,14 @@ public class SLL {
 
         list.display();
 
+        System.out.println("\n"+list.deleteFirst());
+        list.display();
+
+        System.out.println("\n"+list.delete(2));
+        list.display();
+        System.out.println("\n"+list.deleteLast());
+        list.display();
+
+
     }
 }
