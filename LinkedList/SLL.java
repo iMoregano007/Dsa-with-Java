@@ -19,6 +19,9 @@ public class SLL {
         list.display();
         System.out.println("\n"+list.deleteLast());
         list.display();
+        list.insertRecursively(25, 3);
+        System.out.println();
+        list.display();
 
 
     }

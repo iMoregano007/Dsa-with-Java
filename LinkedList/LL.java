@@ -53,6 +53,22 @@ public class LL{
         return val;
     }
 
+    public void insertRecursively(int val, int index){
+        Node tmp = head;
+        insertRec(val, index -1, tmp);
+        size++;
+    }
+
+    private void insertRec(int val, int index, Node node){
+        if(index < 1){
+            Node n = new Node(val, node.next);
+            node.next = n;
+            return;
+        }
+
+        insertRec(val, index -1, node.next);
+    }
+
     public void insertFirst(int val){
         Node node = new Node(val);
         node.next = head;
