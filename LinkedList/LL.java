@@ -7,6 +7,38 @@ public class LL{
     public LL() {
         this.size = 0;
     }
+
+    // cycle detection and finding length of cycle in LL
+
+    public boolean hasCycle(){
+        Node f = head, s = head;
+        while(f != null && f.next != null){
+            s = s.next;
+            f = f.next.next;
+            if(s == f){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int cycleLength(){
+        int l = 0;
+        Node f = head, s = head;
+        while(f != null && f.next != null){
+            s = s.next;
+            f = f.next.next;
+            if(s == f){
+                do{
+                    l++;
+                    f = f.next;
+                } while(s != f);
+                
+            }
+        }
+
+        return l;
+    }
     
     public int deleteFirst(){
         int val = head.value;
