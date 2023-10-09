@@ -25,9 +25,9 @@ public class spiralMatrix{
         } else {
             System.out.println("Invalid Entry.");
         }
-        printSpiralMatrix(matrix);
+        
 
-       
+        
         
     }
     static void simplePrintMatrix(int[][] matrix){
