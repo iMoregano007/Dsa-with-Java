@@ -10,18 +10,22 @@ public class SLL {
         list.insertLast(99);
         list.insert(33, 3);
 
-        list.display();
+        // list.display();
 
-        System.out.println("\n"+list.deleteFirst());
-        list.display();
+        // System.out.println("\n"+list.deleteFirst());
+        // list.display();
 
-        System.out.println("\n"+list.delete(2));
+        // System.out.println("\n"+list.delete(2));
+        // list.display();
+        // System.out.println("\n"+list.deleteLast());
+        // list.display();
+        // list.insertRecursively(25, 3);
+        // System.out.println();
         list.display();
-        System.out.println("\n"+list.deleteLast());
-        list.display();
-        list.insertRecursively(25, 3);
         System.out.println();
-        list.display();
+
+        list.reverseLL();
+
 
 
     }

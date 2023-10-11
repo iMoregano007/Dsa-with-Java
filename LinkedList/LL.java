@@ -8,6 +8,29 @@ public class LL{
         this.size = 0;
     }
 
+    // reverse a linked list using recursion
+
+    public void reverseLL(){
+        Node dummyLL = null, tmp = head;
+        
+
+        
+        head = reverseLLRecFunc(tmp, dummyLL);
+        display();
+    }
+
+    public Node reverseLLRecFunc(Node tmp, Node dummyLL){
+        if(tmp == null){
+            return dummyLL;
+        }
+        Node nxt = tmp.next;
+        tmp.next = dummyLL;
+        dummyLL = tmp;
+        tmp = nxt;
+        
+        return reverseLLRecFunc( tmp, dummyLL);
+    }
+
     // cycle detection and finding length of cycle in LL
 
     public boolean hasCycle(){
