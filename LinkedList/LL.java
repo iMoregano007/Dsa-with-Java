@@ -19,7 +19,7 @@ public class LL{
         display();
     }
 
-    public Node reverseLLRecFunc(Node tmp, Node dummyLL){
+    private Node reverseLLRecFunc(Node tmp, Node dummyLL){
         if(tmp == null){
             return dummyLL;
         }
@@ -29,6 +29,19 @@ public class LL{
         tmp = nxt;
         
         return reverseLLRecFunc( tmp, dummyLL);
+    }
+
+    // reverse a linked list iteratively
+    public void reverseItera(){
+        Node dum = null, next;
+        while(head != null){
+            next = head.next;
+            head.next = dum;
+            dum = head;
+            head = next;
+        }
+        head = dum;
+        display();
     }
 
     // cycle detection and finding length of cycle in LL

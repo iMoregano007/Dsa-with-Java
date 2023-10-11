@@ -25,6 +25,9 @@ public class SLL {
         System.out.println();
 
         list.reverseLL();
+        System.out.println();
+
+        list.reverseItera();
 
 
 
